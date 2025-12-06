@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Đăng nhập</title>
+</head>
+<body style="margin:0; font-family: Arial; background: linear-gradient(to bottom right, #4facfe, #00f2fe);">
+
+    <div style="text-align:center; padding-top: 120px; color: white;">
+        <h1>🔐 Chào mừng bạn đến với Website!</h1>
+        <p style="font-size: 20px;">Vui lòng nhập tên và mật khẩu để tiếp tục</p>
+
+        <div style="background: rgba(255,255,255,0.9); display:inline-block; padding:25px; border-radius:10px;">
+            
+            <input id="username" type="text" placeholder="Nhập tên..." 
+                   style="width: 250px; padding:10px; margin-bottom:15px; border-radius:5px; border:1px solid #ccc;"><br>
+
+            <input id="password" type="password" placeholder="Mật khẩu..."
+                   style="width: 250px; padding:10px; margin-bottom:15px; border-radius:5px; border:1px solid #ccc;"><br>
+
+            <button onclick="login()" 
+                    style="padding:10px 25px; font-size:18px; border:none; border-radius:6px; background:#0077ff; color:white;">
+                Bắt đầu
+            </button>
+        </div>
+
+        <p id="error" style="color: yellow; margin-top:15px;"></p>
+    </div>
+
+    <script>
+        function login() {
+            let user = document.getElementById("username").value;
+            let pass = document.getElementById("password").value;
+
+            // Bạn có thể đổi tên + mật khẩu ở đây
+            const correctUser = "phong";
+            const correctPass = "12345";
+
+            if (user === correctUser && pass === correctPass) {
+                window.location.href = "file:///C:/Users/ACER/OneDrive/Documents/bai_cuoi_ki.html";
+            } else {
+                document.getElementById("error").innerText = "Tên hoặc mật khẩu sai!";
+            }
+        }
+    </script>
+
+</body>
+</html>
